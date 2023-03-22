@@ -1,0 +1,218 @@
+@import 'styles/variables.scss';
+
+.product {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 0 auto;
+  padding: 75px 0px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      border-radius: 12px;
+    }
+
+    .generalImage {
+      img {
+        width: 400px;
+
+        @media (max-width: 800px) {
+          width: 300px;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .otherImage {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+
+      @media (max-width: 380px) {
+        gap: 10px;
+      }
+
+      img {
+        width: 75px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        @media (max-width: 800px) {
+          width: 60px;
+        }
+
+        @media (max-width: 767px) {
+          width: 75px;
+        }
+
+        @media (max-width: 380px) {
+          width: 60px;
+        }
+
+        &:hover {
+          transition: all 0.4s;
+          opacity: 0.5;
+        }
+
+        &.active {
+          opacity: 0.5;
+          border: 3px solid $primary-orange;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .miniTitle {
+        color: $primary-orange;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .activeTitle {
+        color: $dark-blue;
+        font-size: 36px;
+      }
+    }
+
+    .details {
+      p {
+        color: $gray-blue;
+        line-height: 25px;
+        font-size: 14px;
+        max-width: 500px;
+      }
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .generalPrice {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .activePrice {
+          color: $dark-blue;
+          font-size: 26px;
+        }
+
+        .discount {
+          background-color: rgba($primary-pale, $alpha: 0.5);
+          padding: 4px 7px;
+          border-radius: 7px;
+          font-weight: 700;
+          color: $primary-orange;
+          font-size: 14px;
+        }
+      }
+
+      .previousPrice {
+        color: #b1b0b0;
+        text-decoration: line-through;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+
+    .buy {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      @media (max-width: 950px) {
+        flex-direction: column;
+      }
+
+      .count {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $light-gray;
+        border-radius: 12px;
+
+        @media (max-width: 950px) {
+          width: 100%;
+          justify-content: space-around;
+        }
+
+        button {
+          padding: 15px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          transition: all 0.4s;
+
+          &:hover {
+            transition: all 0.4s;
+            opacity: 0.4;
+          }
+        }
+
+        p {
+          color: $dark-blue;
+          font-weight: 700;
+          font-size: 15px;
+        }
+      }
+
+      .addToCart {
+        width: 60%;
+        background-color: $primary-orange;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+        border-radius: 12px;
+        border: none;
+        transition: all 0.4s;
+        cursor: pointer;
+        font-weight: 700;
+
+        @media (max-width: 950px) {
+          width: 100%;
+        }
+
+        &:hover {
+          opacity: 0.6;
+          box-shadow: 0px 0px 10px $primary-orange;
+        }
+
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

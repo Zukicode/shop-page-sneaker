@@ -1,0 +1,43 @@
+@import 'styles/variables.scss';
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: 330px) {
+    gap: 5px;
+  }
+
+  .thumbail {
+    border-radius: 8px;
+  }
+
+  .description {
+    .name {
+      color: $gray-blue;
+      font-size: 13px;
+    }
+
+    .price {
+      display: flex;
+      gap: 5px;
+      margin-top: 4px;
+
+      .priceOne {
+        color: $gray-blue;
+        font-size: 14px;
+      }
+
+      .priceAll {
+        color: $dark-blue;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .delete {
+    cursor: pointer;
+  }
+}

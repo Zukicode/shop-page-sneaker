@@ -1,0 +1,39 @@
+@import 'styles/variables.scss';
+
+.cartAll {
+  width: 300px;
+  min-height: 175px;
+  box-shadow: 0px 5px 30px -15px $black;
+  border-radius: 8px;
+  background-color: $white;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+
+  @media (max-width: 600px) {
+    width: 250px;
+  }
+
+  @media (max-width: 330px) {
+    width: 220px;
+  }
+
+  .header {
+    width: calc(100% - 30px);
+    border-bottom: 1px solid rgb(205, 203, 203);
+    padding: 15px;
+    color: $dark-blue;
+
+    @media (max-width: 600px) {
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 16px;
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
